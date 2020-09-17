@@ -3,12 +3,15 @@ import { AuthService } from "./auth.service";
 import { Router } from "@angular/router";
 
 @Component({
-    templateUrl: './login.component.html'
+    templateUrl: './login.component.html',
+    styleUrls:['./login.component.css']
 })
 
 export class LoginComponent {
     userName
     password
+    mouseoverLogin
+    
     constructor(private authService:AuthService,  private router: Router){
 
     }
