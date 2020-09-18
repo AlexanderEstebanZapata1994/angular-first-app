@@ -17,7 +17,7 @@ import { EventsAppComponent } from './events-app.component';
 import { appRoutes } from './routes'
 import { ToastrService } from './common';
 import { NavBarComponent } from './nav/nav-bar.component';
-import { AuthService } from './user/auth.service';
+import { AuthService } from './user/shared/auth.service';
 
 @NgModule({
   imports: [
