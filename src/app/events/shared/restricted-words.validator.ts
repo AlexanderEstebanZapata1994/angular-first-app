@@ -7,7 +7,7 @@ export function restrictedWords(words) {
         var invalidWords = words.filter((word : string) => control.value.includes(word) ?? word)
 
         return invalidWords.length > 0
-        ? {'restrictedWords': invalidWords.join(',')}
+        ? {'restrictedWords': invalidWords.join(', ')}
         : null
     }
 }
