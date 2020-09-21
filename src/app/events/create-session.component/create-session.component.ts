@@ -53,5 +53,8 @@ export class CreateSessionComponent implements OnInit {
         console.log(session)
     }
 
+    cancel(){
+        this.router.navigate(['/events'])
+    }
         
 }
