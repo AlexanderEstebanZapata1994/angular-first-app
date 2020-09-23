@@ -10,7 +10,8 @@ import {
   EventService,
   EventThumbnailComponent,
   EventsListComponent,
-  CreateSessionComponent
+  CreateSessionComponent, 
+  SessionListComponent
 } from './events'
 
 import { Error404Component } from './errors'
@@ -29,13 +30,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RouterModule.forRoot(appRoutes)
   ],
   declarations: [
+    NavBarComponent,
     EventsAppComponent,
     EventsListComponent,
     EventThumbnailComponent,
-    NavBarComponent,
     EventDetailComponent,
     CreateEventComponent,
     CreateSessionComponent,
+    SessionListComponent,
     Error404Component
   ],
   providers: [
