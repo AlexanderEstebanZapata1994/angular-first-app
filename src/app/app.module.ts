@@ -11,7 +11,8 @@ import {
   EventThumbnailComponent,
   EventsListComponent,
   CreateSessionComponent, 
-  SessionListComponent
+  SessionListComponent,
+  DurationPipe
 } from './events'
 
 import { Error404Component } from './errors'
@@ -39,7 +40,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CreateSessionComponent,
     SessionListComponent,
     Error404Component,
-    CollapsibleWellComponent
+    CollapsibleWellComponent, 
+    DurationPipe
   ],
   providers: [
     EventService,
