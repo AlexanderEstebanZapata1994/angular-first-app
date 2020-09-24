@@ -18,14 +18,14 @@ import {
 import { Error404Component } from './errors'
 import { EventsAppComponent } from './events-app.component';
 import { appRoutes } from './routes'
-import { TOASTR_TOKEN, CollapsibleWellComponent, Toastr } from './common';
+import { TOASTR_TOKEN, CollapsibleWellComponent, Toastr, JQ_TOKEN } from './common';
 import { NavBarComponent } from './nav/nav-bar.component';
 import { AuthService } from './user/shared/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
-// let toastr:typeof TOASTR_TOKEN = window['toastr'];
-declare let toastr: Toastr
+let toastr:Toastr = window['toastr'];
+let jQuery:Toastr = window['$'];
 @NgModule({
   imports: [
     BrowserModule,
