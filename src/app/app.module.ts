@@ -18,11 +18,14 @@ import {
 import { Error404Component } from './errors'
 import { EventsAppComponent } from './events-app.component';
 import { appRoutes } from './routes'
-import { ToastrService, CollapsibleWellComponent } from './common';
+import { TOASTR_TOKEN, CollapsibleWellComponent, Toastr } from './common';
 import { NavBarComponent } from './nav/nav-bar.component';
 import { AuthService } from './user/shared/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+
+// let toastr:typeof TOASTR_TOKEN = window['toastr'];
+declare let toastr: Toastr
 @NgModule({
   imports: [
     BrowserModule,
@@ -45,10 +48,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   providers: [
     EventService,
-    ToastrService,
     EventRouterActivator,
     EventListResolver,
     AuthService,
+    {
+      provide: TOASTR_TOKEN, 
+      useValue: toastr
+    },
     { provide: 'canDeactivateCreateEvent', 
       useValue: checkDirtyState
     }
