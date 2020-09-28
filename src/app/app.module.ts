@@ -13,7 +13,9 @@ import {
   EventsListComponent,
   CreateSessionComponent, 
   SessionListComponent,
-  DurationPipe
+  DurationPipe, 
+  UpvoteComponent, 
+  VoterService
 } from './events'
 
 import { 
@@ -54,13 +56,15 @@ let jQuery = window['$'];
     CollapsibleWellComponent, 
     DurationPipe, 
     SimpleModalComponent,
-    ModalTriggerDirective
+    ModalTriggerDirective,
+    UpvoteComponent
   ],
   providers: [
     EventService,
     EventRouterActivator,
     EventListResolver,
     AuthService,
+    VoterService,
     {
       provide: TOASTR_TOKEN, 
       useValue: toastr

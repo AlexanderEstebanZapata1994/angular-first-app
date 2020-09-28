@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { EventService } from '../shared/event.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { IEvent, ISession } from '../shared';
 
 @Component({
@@ -17,6 +17,9 @@ export class EventDetailComponent {
 
     ngOnInit(){
         this.event = this.eventService.getEvent(+this.route.snapshot.params['id']);
+        this.route.params.forEach((params: Params) => {
+            this.event = this.eventService.getEvent(+params['id'])
+        })
     }
 
     addSession(){
